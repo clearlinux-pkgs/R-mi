@@ -4,7 +4,7 @@
 #
 Name     : R-mi
 Version  : 1.0
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Summary  : Missing Data Imputation and Model Checking
@@ -12,12 +12,8 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-arm
 Requires: R-betareg
-Requires: R-sn
-Requires: R-truncnorm
 BuildRequires : R-arm
 BuildRequires : R-betareg
-BuildRequires : R-sn
-BuildRequires : R-truncnorm
 BuildRequires : clr-R-helpers
 
 %description
@@ -31,11 +27,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521228294
+export SOURCE_DATE_EPOCH=1523318485
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521228294
+export SOURCE_DATE_EPOCH=1523318485
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
