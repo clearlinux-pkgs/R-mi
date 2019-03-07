@@ -4,7 +4,7 @@
 #
 Name     : R-mi
 Version  : 1.0
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Summary  : Missing Data Imputation and Model Checking
