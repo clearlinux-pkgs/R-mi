@@ -4,26 +4,31 @@
 #
 Name     : R-mi
 Version  : 1.0
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Summary  : Missing Data Imputation and Model Checking
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Formula
-Requires: R-arm
-Requires: R-betareg
-Requires: R-flexmix
-Requires: R-lmtest
-Requires: R-sandwich
-Requires: R-sn
-Requires: R-truncnorm
-Requires: R-zoo
+Requires: R-Rcpp
+Requires: R-abind
+Requires: R-coda
+Requires: R-lme4
+Requires: R-minqa
+Requires: R-modeltools
+Requires: R-nloptr
 BuildRequires : R-Formula
+BuildRequires : R-Rcpp
+BuildRequires : R-abind
 BuildRequires : R-arm
 BuildRequires : R-betareg
+BuildRequires : R-coda
 BuildRequires : R-flexmix
+BuildRequires : R-lme4
 BuildRequires : R-lmtest
+BuildRequires : R-minqa
+BuildRequires : R-modeltools
+BuildRequires : R-nloptr
 BuildRequires : R-sandwich
 BuildRequires : R-sn
 BuildRequires : R-truncnorm
@@ -41,10 +46,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552776000
+export SOURCE_DATE_EPOCH=1553448187
 
 %install
-export SOURCE_DATE_EPOCH=1552776000
+export SOURCE_DATE_EPOCH=1553448187
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

@@ -1,9 +1,16 @@
 1.0
 R-Formula
+R-Rcpp
+R-abind
 R-arm
 R-betareg
+R-coda
 R-flexmix
+R-lme4
 R-lmtest
+R-minqa
+R-modeltools
+R-nloptr
 R-sandwich
 R-sn
 R-truncnorm
