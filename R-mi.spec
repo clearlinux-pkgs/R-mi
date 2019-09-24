@@ -4,35 +4,20 @@
 #
 Name     : R-mi
 Version  : 1.0
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/mi_1.0.tar.gz
 Summary  : Missing Data Imputation and Model Checking
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Rcpp
-Requires: R-abind
-Requires: R-coda
-Requires: R-lme4
-Requires: R-minqa
-Requires: R-modeltools
-Requires: R-nloptr
-BuildRequires : R-Formula
-BuildRequires : R-Rcpp
-BuildRequires : R-abind
+Requires: R-arm
+Requires: R-betareg
+Requires: R-sn
+Requires: R-truncnorm
 BuildRequires : R-arm
 BuildRequires : R-betareg
-BuildRequires : R-coda
-BuildRequires : R-flexmix
-BuildRequires : R-lme4
-BuildRequires : R-lmtest
-BuildRequires : R-minqa
-BuildRequires : R-modeltools
-BuildRequires : R-nloptr
-BuildRequires : R-sandwich
 BuildRequires : R-sn
 BuildRequires : R-truncnorm
-BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
 %description
@@ -45,13 +30,13 @@ No detailed description available
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1553448187
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1569363671
 
 %install
-export SOURCE_DATE_EPOCH=1553448187
+export SOURCE_DATE_EPOCH=1569363671
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -80,12 +65,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  mi || :
+R CMD check --no-manual --no-examples --no-codoc mi || :
 
 
 %files
